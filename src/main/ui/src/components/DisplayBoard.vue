@@ -1,22 +1,19 @@
 <template>
-    <div class="display-board">
-        <h4>Users Created</h4>
-        <div class="number">
-        {{numberOfUsers}}
-        </div>
-        <div class="btn">
-            <button @click='getAllUsers()' type="button" class="btn btn-warning">Get all Users</button>
-        </div>
+  <div class="display-board">
+    <h4>Customers Count</h4>
+    <div class="number">
+      {{numberOfCustomers}}
     </div>
+  </div>
 </template>
 
 <script>
     export default {
         name: 'DisplayBoard',
-        props: ['numberOfUsers'],
+        props: ['numberOfCustomers'],
         methods: {
-            getAllUsers() {
-                this.$emit('getAllUsers')
+            getAllCustomers() {
+                this.$emit('getAllCustomers')
             }
         }
     }
